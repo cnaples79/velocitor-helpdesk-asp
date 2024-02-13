@@ -19,19 +19,19 @@
                 <img src="~/images/VTrack-Logo-Large.png" alt="Velocitor Solutions" class="h-12" />
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-red-600" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <label asp-for="Input.Email" class="form-label">Email</label>
+                <div class="pt-8">
                     <div class="group relative flex flex-col">
                         <span asp-validation-for="Input.Email" class="text-red-600"></span>
-                        <input asp-for="Input.Email" class="outline-none" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                        <input asp-for="Input.Email" class="login-input outline-none border-b-2" autocomplete="username" aria-required="true" />
+                        <label asp-for="Input.Email" class="absolute top-0 left-0 transition-all duration-300  pt-1 group-focus-within:-translate-y-6 group-focus-within:scale-75 group-focus-within:pt-0 group-focus-within:pl-0 group-focus-within:text-velblue cursor-text origin-top-left">Username</label>
                         <span class="w-0 h-0.5 bg-velblue block absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out group-focus-within:w-full"></span>
                     </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <label asp-for="Input.Password" class="form-label">Password</label>
+                <div class="py-8">
                     <div class="group relative flex flex-col">
                         <span asp-validation-for="Input.Password" class="text-red-600"></span>
-                        <input asp-for="Input.Password" class="outline-none" autocomplete="current-password" aria-required="true" placeholder="password" />
+                        <input asp-for="Input.Password" class="login-input outline-none border-b-2" autocomplete="current-password" aria-required="true" />
+                        <label asp-for="Input.Password" class="absolute top-0 left-0 transition-all duration-300  pt-1 group-focus-within:-translate-y-6 group-focus-within:scale-75 group-focus-within:pt-0 group-focus-within:pl-0 group-focus-within:text-velblue cursor-text">Password</label>
                         <span class="w-0 h-0.5 bg-velblue block absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out group-focus-within:w-full"></span>
                     </div>
                 </div>
@@ -40,6 +40,8 @@
                 </div>
             </form>
         </div>
+
+        <script src="~/js/login-input.js" asp-append-version="true"></script>
     </body>
 </html>
 

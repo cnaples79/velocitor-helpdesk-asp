@@ -25,6 +25,13 @@
     }
 }
 
+.group input.has-content + label {
+    transform: translateY(-1.5rem) scale(0.75);
+    padding-top: 0;
+    padding-left: 0;
+    color: #606c88; /* Or your preferred color */
+}
+
 /* Custom scrollbar for Webkit (Chrome, Safari) and Edge */
 ::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
