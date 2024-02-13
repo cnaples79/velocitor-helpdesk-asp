@@ -1,0 +1,16 @@
+@model SidebarItemModel
+
+<div class="group flex items-center justify-center h-16 w-24 hover:bg-velgrayhover">
+    <a id="@(Model?.AspController.ToLower())-link"
+       asp-area="@Model?.AspArea"
+       asp-controller="@Model?.AspController"
+       asp-action="@Model?.AspAction"
+       class="relative h-16 text-vellightgray">
+        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
+            <i class="@Model?.IconClass fa-xl"></i>
+        </span>
+        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out text-sm">
+            @Model?.LinkText
+        </span>
+    </a>
+</div>

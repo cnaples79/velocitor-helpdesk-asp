@@ -1,0 +1,15 @@
+<header class="flex items-center w-full h-[4.125rem] bg-white px-4 shadow border-b border-b-slate-200">
+    <div class="justify-start w-1/2">
+        <label htmlFor="sidebar-toggle" for="sidebar-toggle" class="cursor-pointer">
+            <i class="fa-solid fa-chevrons-right fa-1x text-veldarkgray transition-transform duration-300 ease-in-out"></i>
+        </label>
+    </div>
+    <div class="flex shrink-0 justify-center">
+        <a asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/images/VTrack-Logo-Large.png" alt="Velocitor Solutions" class="h-12" />
+        </a>
+    </div>
+    <div class="flex justify-end w-1/2">
+        <partial name="_LoginPartial" />
+    </div>
+</header>

@@ -1,0 +1,22 @@
+<aside class="sidebar transition-all duration-300 ease-in-out overflow-hidden bg-velgray" id="sidebar">
+    <div class="flex justify-center items-center h-[4.125rem] bg-velblue">
+        <img src="~/images/VTrack-Logo-Small.png" alt="Velocitor Solutions" class="" />
+    </div>
+    <div class="flex flex-col items-center">
+        @await Component.InvokeAsync("SidebarItem", new {
+            linkText = "Dashboard",
+            iconClass = "fa-solid fa-gauge-high ",
+            aspArea = "", aspController = "Home", aspAction = "Index"
+        })
+        @await Component.InvokeAsync("SidebarItem", new {
+            linkText = "Fleet",
+            iconClass = "fa-solid fa-location-dot",
+            aspArea = "", aspController = "Home", aspAction = "Privacy"
+        })
+        @await Component.InvokeAsync("SidebarItem", new {
+            linkText = "Drivers",
+            iconClass = "fa-solid fa-user ",
+            aspArea = "", aspController = "Home", aspAction = "Privacy"
+        })
+    </div>
+</aside>
