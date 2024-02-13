@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#sidebar-toggle:checked ~ .sidebar {
+    @apply w-[5.625rem];
+}
+
+#sidebar-toggle:not(:checked) ~ .sidebar {
+    @apply w-0;
+}
+
+#sidebar-toggle:checked ~ div > header > div > label > i {
+    @apply transform -rotate-180;
+}
+
+.sidebar {
+    @apply w-0 overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+/* Sidebar open by default ONLY on larger screens */
+@media (min-width: 768px) { 
+    #sidebar-toggle:checked ~ .sidebar {
+        @apply w-[5.625rem];
+    }
+}
+
+/* Custom scrollbar for Webkit (Chrome, Safari) and Edge */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1; /* Track color */
+border-radius: 10px; /* Roundness of the track */
+}
+
+::-webkit-scrollbar-thumb {
+background: #888; /* Handle color */
+border-radius: 10px; /* Roundness of the handle */
+}
+
+/* Hover or active state for handle */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+/* Custom scrollbar for Firefox */
+* {
+scrollbar-width: thin; /* "auto" or "thin" */
+scrollbar-color: #888 #f1f1f1; /* thumb and track color */
+}

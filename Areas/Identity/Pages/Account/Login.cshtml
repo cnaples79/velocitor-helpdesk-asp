@@ -21,7 +21,7 @@
                 <div asp-validation-summary="ModelOnly" class="text-red-600" role="alert"></div>
                 <div class="form-floating mb-3">
                     <label asp-for="Input.Email" class="form-label">Email</label>
-                    <div class="group relative">
+                    <div class="group relative flex flex-col">
                         <span asp-validation-for="Input.Email" class="text-red-600"></span>
                         <input asp-for="Input.Email" class="outline-none" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                         <span class="w-0 h-0.5 bg-velblue block absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out group-focus-within:w-full"></span>
@@ -29,8 +29,8 @@
                 </div>
                 <div class="form-floating mb-3">
                     <label asp-for="Input.Password" class="form-label">Password</label>
-                    <span asp-validation-for="Input.Password" class="text-red-600"></span>
-                    <div class="group relative">
+                    <div class="group relative flex flex-col">
+                        <span asp-validation-for="Input.Password" class="text-red-600"></span>
                         <input asp-for="Input.Password" class="outline-none" autocomplete="current-password" aria-required="true" placeholder="password" />
                         <span class="w-0 h-0.5 bg-velblue block absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out group-focus-within:w-full"></span>
                     </div>
