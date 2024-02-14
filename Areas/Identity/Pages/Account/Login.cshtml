@@ -15,15 +15,15 @@
     </head>
     <body>
         <div class="min-h-screen w-full flex bg-velblue items-center justify-center">
-            <form id="account" method="post" class="flex flex-col bg-white p-4 rounded">
-                <img src="~/images/VTrack-Logo-Large.png" alt="Velocitor Solutions" class="h-12" />
+            <form id="account" method="post" class="flex flex-col bg-white pt-[3.125rem] px-10 pb-10 rounded w-96">
+                <img src="~/images/VTrack-Logo-Large.png" alt="Velocitor Solutions" class="h-[4.875rem] w-80" />
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-red-600" role="alert"></div>
                 <div class="pt-8">
                     <div class="group relative flex flex-col">
                         <span asp-validation-for="Input.Email" class="text-red-600"></span>
                         <input asp-for="Input.Email" class="login-input outline-none border-b-2" autocomplete="username" aria-required="true" />
-                        <label asp-for="Input.Email" class="absolute top-0 left-0 transition-all duration-300  pt-1 group-focus-within:-translate-y-6 group-focus-within:scale-75 group-focus-within:pt-0 group-focus-within:pl-0 group-focus-within:text-velblue cursor-text origin-top-left">Username</label>
+                        <label asp-for="Input.Email" class="absolute top-0 left-0 transition-all duration-300  pt-1 group-focus-within:-translate-y-6 group-focus-within:scale-75 group-focus-within:pt-0 group-focus-within:pl-0 group-focus-within:text-velblue cursor-text origin-top-left select-none text-vellabelgray">Username</label>
                         <span class="w-0 h-0.5 bg-velblue block absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out group-focus-within:w-full"></span>
                     </div>
                 </div>
@@ -31,12 +31,21 @@
                     <div class="group relative flex flex-col">
                         <span asp-validation-for="Input.Password" class="text-red-600"></span>
                         <input asp-for="Input.Password" class="login-input outline-none border-b-2" autocomplete="current-password" aria-required="true" />
-                        <label asp-for="Input.Password" class="absolute top-0 left-0 transition-all duration-300  pt-1 group-focus-within:-translate-y-6 group-focus-within:scale-75 group-focus-within:pt-0 group-focus-within:pl-0 group-focus-within:text-velblue cursor-text">Password</label>
+                        <label asp-for="Input.Password" class="absolute top-0 left-0 transition-all duration-300  pt-1 group-focus-within:-translate-y-6 group-focus-within:scale-75 group-focus-within:pt-0 group-focus-within:pl-0 group-focus-within:text-velblue cursor-text origin-top-left select-none text-vellabelgray">Password</label>
                         <span class="w-0 h-0.5 bg-velblue block absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out group-focus-within:w-full"></span>
                     </div>
                 </div>
                 <div>
                     <button id="login-submit" type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-vellink hover:bg-velblue">Sign In</button>
+                </div>
+                <div class="flex justify-between pt-4">
+                    <label asp-for="Input.RememberMe" class="inline-flex items-center cursor-pointer">
+                        <input class="form-checkbox h-6 w-6 transition-all duration-300 ease-in-out cursor-pointer" asp-for="Input.RememberMe" />
+                        <span class="ml-2 text-vellabelgray">@Html.DisplayNameFor(m => m.Input.RememberMe)</span>
+                    </label>
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword" class="text-vellink">Forgot password?</a>
+                    </p>
                 </div>
             </form>
         </div>
